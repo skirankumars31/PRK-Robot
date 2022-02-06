@@ -1,0 +1,18 @@
+tasks:
+  001 Robot:
+    robotTaskName: Insert the sales data for the week and export it as a PDF
+  021 Robot:
+    robotTaskName: Give access to users
+
+  Run all tasks:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+  - PRK
+ignoreFiles:
+  - .gitignore
